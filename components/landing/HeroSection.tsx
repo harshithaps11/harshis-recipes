@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useRef } from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { ArrowRight, ChevronDown, Refrigerator, RefreshCw, BarChart3 } from 'lucide-react'
 
 const glassCards = [
@@ -23,12 +23,12 @@ const glassCards = [
   },
 ]
 
-const container = {
+const container: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.08 } },
 }
 
-const word = {
+const word: Variants = {
   hidden: { opacity: 0, y: 40 },
   show:   { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
 }
